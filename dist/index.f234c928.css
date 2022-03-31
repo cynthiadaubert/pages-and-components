@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+.welcome {
+  padding: 20px;
+}
+
+/*# sourceMappingURL=index.f234c928.css.map */

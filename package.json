@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "esnext"
+  },
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.4.0"
+  },
+  "scripts": {
+    "dev": "parcel serve ./index.html",
+    "build": "parcel build ./index.html"
+  }
+}
