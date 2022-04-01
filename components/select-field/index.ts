@@ -29,7 +29,7 @@ export function initSelectFieldComp() {
               border-radius: 4px;
               padding: 17px 13px 17px 13px;
               heigth: 55px;
-            
+              font-family: Roboto;
               }
         
               `;

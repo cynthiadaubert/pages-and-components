@@ -786,7 +786,9 @@ function initTextFieldComp() {
             font-size: 18px;
             border: solid 2px;
             border-radius: 4px;
+            width: 290px;
             padding: 17px 13px 17px 13px;
+            margin: 0;
             }
       
             `;
@@ -942,7 +944,7 @@ function initSelectFieldComp() {
               border-radius: 4px;
               padding: 17px 13px 17px 13px;
               heigth: 55px;
-            
+              font-family: Roboto;
               }
         
               `;
