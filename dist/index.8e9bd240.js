@@ -560,7 +560,9 @@ function initTextsComp() {
         font-size: 52px;
         font-weight: bold;
         text-align: left;
-        padding: 40px 0px 30px 0px;
+        padding: 40px 0px 30px 40px;
+        width: 305px;
+       
         
       }
 
@@ -671,23 +673,29 @@ function initWelcome({ goTo  }) {
       <div>
         <custom-header></custom-header>
       </custom-header></div>
-      
       <custom-text variant="title" class="welcome">Te damos la bienvenida a esta página</custom-text>
-      <custom-text variant="body-article" class="welcome">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur iure voluptas quia accusantium voluptatum aspernatur provident et repudiandae quam veritatis, libero porro sit beatae laboriosam a aut consequatur quidem?</custom-text>
-      <custom-text variant="subtitle" class="welcome">Para continuar ingresá tu nombre</custom-text>
-      <div>
-        <text-field label="Nombre" class="welcome"></text-field>
+      <div class="container">
+        
+        <custom-text variant="body-article" class="welcome">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur iure voluptas quia accusantium voluptatum aspernatur provident et repudiandae quam veritatis, libero porro sit beatae laboriosam a aut consequatur quidem?</custom-text>
+        <custom-text variant="subtitle" class="welcome">Para continuar ingresá tu nombre</custom-text>
+        <div>
+          <text-field label="Nombre" class="welcome"></text-field>
+        </div>
+        <div>
+          <custom-button class="start-button">Comenzar</custom-button>
+        </div>
+       
       </div>
-      <div>
-        <custom-button class="start-button welcome">Comenzar</custom-button>
-      </div>
+        
       <div>
         <custom-footer></custom-footer>
-      </div>
-              
+      </div> 
+
       `;
     const startButtonElem = div.querySelector(".start-button");
-    startButtonElem.addEventListener("click", ()=>{
+    const shadowButton = startButtonElem.shadowRoot;
+    const shadowButtonElem = shadowButton.querySelector(".root");
+    shadowButtonElem.addEventListener("click", ()=>{
         //   console.log("clickkkk")
         goTo("/step-1");
     });
@@ -706,28 +714,33 @@ function initStepOne({ goTo  }) {
       <div>
         <custom-header></custom-header>
       </custom-header></div>
-      
-      <custom-text variant="title" class="welcome">Necesitamos algunos datos más</custom-text>
+    <custom-text variant="title" class="welcome">Necesitamos algunos datos más</custom-text>
+      <div class="container">
+         
+        <div>
+          <text-field label="Email" class="welcome"></text-field>
+        </div>
+        <div>
+          <text-field label="Comida favorita" class="welcome"></text-field>
+        </div>
+        <div>
+          <select-field class="welcome"></select-field>
+        </div>
+        <div>
+          <custom-button class="start-button">Continuar</custom-button>
+        </div>
 
-      <div>
-        <text-field label="Email" class="welcome"></text-field>
-      </div>
-      <div>
-        <text-field label="Comida favorita" class="welcome"></text-field>
-      </div>
-      <div>
-        <select-field class="welcome"></select-field>
-      </div>
-      <div>
-        <custom-button class="start-button welcome">Continuar</custom-button>
-      </div>
-      <div>
-        <custom-footer></custom-footer>
-      </div>
+      </div>  
+        <div>
+          <custom-footer></custom-footer>
+        </div>
               
       `;
     const startButtonElem = div.querySelector(".start-button");
-    startButtonElem.addEventListener("click", ()=>{
+    const shadowButton = startButtonElem.shadowRoot;
+    const shadowButtonElem = shadowButton.querySelector(".root");
+    shadowButtonElem.addEventListener("click", ()=>{
+        //   console.log("clickkkk")
         goTo("/thank-you");
     });
     return div;
@@ -745,11 +758,14 @@ function initThankYou({ goTo  }) {
       <div>
         <custom-header></custom-header>
       </custom-header></div>
-      
       <custom-text variant="title" class="welcome">Gracias</custom-text>
-      <custom-text variant="subtitle" class="welcome">Toda la información que nos brindaste es muy importante</custom-text>
+      <div class="container">
+        
+        <custom-text variant="subtitle" class="welcome">Toda la información que nos brindaste es muy importante</custom-text>
         <custom-button class="start-button welcome">De nada</custom-button>
       </div>
+
+
       <div>
         <custom-footer></custom-footer>
       </div>
@@ -786,15 +802,15 @@ function initTextFieldComp() {
             font-size: 18px;
             border: solid 2px;
             border-radius: 4px;
-            width: 290px;
+            width: 250px;
             padding: 17px 13px 17px 13px;
-            margin: 0;
+        
             }
       
             `;
             div.innerHTML = `
             <label class="label welcome"><custom-text>${label}</custom-text></label>
-            <input type="text" class="input welcome"/>
+            <input type="text" class="input"/>
 
             `;
             shadow.appendChild(div);

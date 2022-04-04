@@ -1,9 +1,5 @@
 * {
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   
 }
 
 
@@ -13,3 +9,13 @@
 
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 20px 20px 20px; 
+}
+
+body {
+    margin: 0;
+}

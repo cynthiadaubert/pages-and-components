@@ -24,16 +24,16 @@ export function initTextFieldComp() {
             font-size: 18px;
             border: solid 2px;
             border-radius: 4px;
-            width: 290px;
+            width: 250px;
             padding: 17px 13px 17px 13px;
-            margin: 0;
+        
             }
       
             `;
 
         div.innerHTML = `
             <label class="label welcome"><custom-text>${label}</custom-text></label>
-            <input type="text" class="input welcome"/>
+            <input type="text" class="input"/>
 
             `;
 

@@ -20,7 +20,9 @@ export function initTextsComp() {
         font-size: 52px;
         font-weight: bold;
         text-align: left;
-        padding: 40px 0px 30px 0px;
+        padding: 40px 0px 30px 40px;
+        width: 305px;
+       
         
       }
 

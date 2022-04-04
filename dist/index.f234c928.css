@@ -1,12 +1,20 @@
 * {
   box-sizing: border-box;
-  flex-direction: column;
-  justify-content: center;
-  display: flex;
 }
 
 .welcome {
   padding: 20px;
+}
+
+.container {
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  display: flex;
+}
+
+body {
+  margin: 0;
 }
 
 /*# sourceMappingURL=index.f234c928.css.map */
